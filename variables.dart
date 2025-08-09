@@ -27,4 +27,14 @@ void main() {
   print('Image URL: $imageUrl');
   print('Image Tags: ${imageTags.join(', ')}');
 
+  /**
+    * multiple lines
+    * of
+    *comments
+  */
+
+  // one single line of comment
+
+
+
 }
