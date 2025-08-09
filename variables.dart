@@ -16,8 +16,15 @@ void main() {
   };
 
   print('Name: $name');
-  print('Year: $year');
+  print('Year: $year'); 
   print('Antenna Diameter: ${antennaDiameter}m');
   print('Flyby Objects: ${flybyObjects.join(', ')}');
   print('Image URL: ${image['url']}');
+
+  String imageUrl = 'Some string here';
+  List<String> imageTags = ['tag1', 'tag2'];
+
+  print('Image URL: $imageUrl');
+  print('Image Tags: ${imageTags.join(', ')}');
+
 }
