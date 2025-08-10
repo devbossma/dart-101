@@ -1,6 +1,10 @@
 void main() {
   // This is a simple Dart program that demonstrates variable declaration and printing.
 
+  // Should know that everything in Dart is an object, so eather a type is builtin or user definded,
+  // it still actually an instance of classes and inherit from Object.
+
+
   /**
    * In Dart, you can declare variables using the var keyword.
    * Variables can hold different types of data, such as strings, numbers, lists, and maps.
@@ -29,6 +33,19 @@ void main() {
 
   // one single line of comment
   // oan other single line of comment
+
+  /**
+   * You may use the {Better Comments} Extenssion for the Following
+   *   Declaration of a Class or Method
+   * * Hilight Importants Thinks or instrauctions.
+   * @params 
+   * @return
+   * @throw
+   * @return
+   * ? Making Questions
+   * ! Danger for Depreceted Methods or Class
+   * TODO: Assign a Todo this will appear in the problems outputs of VsCode until you delete it.
+   */
 
 
   // now let's figure out how to get the Variable type.
@@ -111,6 +128,8 @@ print(string);
   However, its overuse can lead to less readable code and more difficult debugging due to the lack of compile-time type enforcement.
 */
 
+// So {dynamic} is A type that disables static type checking, allowing a variable to hold values of any type at runtime.
+
 dynamic string_2 = "Hello word agin!";
 print(string_2.toUpperCase()); // that will works fine.
 
@@ -119,22 +138,50 @@ print(string_2.toUpperCase()); // that will works fine.
 // The following lines of code explaine all data types in Dart language
 
 
-  String imageUrl = 'Some string here';
+
+// ######### ######### Built-in types ######## ########
+
+// Strings values
+  String imageUrl = "src/public/images/logo.png";
+
+// numirical values
   int age = 35;
   double price = 9.99;
+  num any = 12; // num type can hold int and/or double types.
+  any = 12.5; // num can also hold double values
+  print('Any: ${any}');
+
+  // Bouleans
   bool inStock = true;
+
+  // Null safty just adding "?" after type keyword > {String?, int? ...}
+  String? nullable;
+
+  print('Image URL: $imageUrl');
+  print('The Creator of thsi Repo is ${age}');
+  print('Price: \$${price}');
+  print('In Stock: ${inStock}');
+  print('Nullable: ${nullable ?? "null"}');
+
+  print(nullable.runtimeType); // we will get "Null" as result. 
+
+
+// in Other programming languages we may call the follwing Types Non-Premetives types, but that in Dart is no tha case
+// As we duscussed before Every type in Dart is an Object or Instance of an object.
+
+
+// 1. List: Ordered collections of values (analogous to arrays).
+// Declared as : List<T> variable_name;
+  List<String> imageTags = ['tag1', 'tag2'];
+  print('Image Tags: ${imageTags.join(', ')}');
 
 
 
   Map<String, String> adresses = {'billing' : 'Billing Adress', 'shipping' : 'Shipping Adress' };
-  List<String> imageTags = ['tag1', 'tag2'];
-  
-
-  print('Image URL: $imageUrl');
-  print('Image Tags: ${imageTags.join(', ')}');
-  print('The Creator of thsi Repo is ${age}');
-
   print(adresses);
+
+  
+  
 
 
 }

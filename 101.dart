@@ -6,4 +6,15 @@ void main () {
    * To display text on the console, you can use the top-level print() function:
    */
   print('Hello, World!');
+
+  
+  print(42);
+
+  // Dart supports string interpolation:
+  var name = 'Alice';
+  print('Hello, $name!');
+
+  // You can also print boolean values:
+  print(true);
+
 }
